@@ -1,0 +1,13 @@
+<div class="distribution-container">
+  <h2 class="sub-title">Open Source Contributions</h2>
+  
+  <div class="github-grid">
+    <div class="github-tile" *ngFor="let repo of githubRepos">
+      <h3 class="repo-title">{{ repo.name }}</h3>
+      <p class="repo-description">{{ repo.description }}</p>
+      <a [href]="repo.url" target="_blank" class="repo-link">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+  </div>
+</div>

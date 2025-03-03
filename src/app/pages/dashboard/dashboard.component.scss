@@ -1,0 +1,65 @@
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #1E3A8A, #14B8A6);
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero {
+    max-width: 600px;
+  
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  
+    .highlight {
+      color: #FFC107; // Accent color
+    }
+  
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+  
+    .hero-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      img {
+        width: 90px;  // Increase size for better visibility
+        height: 90px;
+        border-radius: 50%;  // Makes icons circular
+        background: rgba(255, 255, 255, 0.1); // Adds slight transparency
+        padding: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); // Adds depth
+    
+        &:hover {
+          transform: scale(1.3); // Enlarges icon on hover
+          box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.4); // Glowing effect
+        }
+      
+      }
+    }
+  
+    .explore-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #121212;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  
+      &:hover {
+        background-color: #FFC107;
+      }
+    }
+  }
+  

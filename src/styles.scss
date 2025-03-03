@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "aos/dist/aos.css";
+
+// Global Variables
+$primary-color: #1E3A8A;
+$accent-color: #14B8A6;
+$dark-bg: #121212;
+$light-bg: #f4f4f4;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $light-bg;
+  color: $primary-color;
+  transition: background-color 0.3s ease;
+}
+
+// Dark Mode
+.dark-mode {
+  background-color: $dark-bg;
+  color: white;
+}
+
+// Animations
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}

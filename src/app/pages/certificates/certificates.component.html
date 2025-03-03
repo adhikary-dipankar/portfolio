@@ -1,0 +1,24 @@
+<div class="certificates-container">
+    <h1 class="section-title">My Certifications</h1>
+  
+    <div class="certificates-grid">
+      <div class="certificate-card" *ngFor="let cert of certificates">
+        <div class="certificate-inner">
+          <!-- Front Side -->
+          <div class="certificate-front">
+            <img [src]="cert.image" [alt]="cert.title">
+            <h3>{{ cert.title }}</h3>
+          </div>
+  
+          <!-- Back Side -->
+          <div class="certificate-back">
+            <h3>{{ cert.title }}</h3>
+            <h4>{{ cert.issuer }} - {{ cert.year }}</h4>
+            <p>{{ cert.description }}</p>
+            <a [href]="cert.link" target="_blank" class="btn">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

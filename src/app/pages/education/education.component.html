@@ -1,0 +1,28 @@
+<div class="education-container">
+    <div class="roadmap">
+      <div class="pathway"></div>
+  
+      <!-- Loop through each milestone -->
+      <div *ngFor="let milestone of milestones; let i = index" 
+           class="milestone-container"
+           (click)="toggleExpand(i)">
+  
+        <!-- Circular Icon -->
+        <div class="milestone-icon">
+          <i [class]="milestone.icon"></i>
+        </div>
+  
+        <!-- Tile Name (Always Visible) -->
+        <div class="milestone-title">{{ milestone.title }}</div>
+
+        <!-- Popup Details (Visible on Click) -->
+        <div class="milestone-popup" *ngIf="milestone.expanded">
+          <h3>{{ milestone.year }}</h3>
+          <h4>{{ milestone.title }}</h4>
+          <p>{{ milestone.description }}</p>
+          <p>{{ milestone.details }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

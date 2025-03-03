@@ -1,0 +1,97 @@
+/* Full-page container */
+.distribution-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1E3A8A, #14B8A6);
+  color: white;
+  overflow: hidden;
+  padding-top: 80px;
+
+  /* ✅ Background Image */
+  /*background-image: url('https://t3.ftcdn.net/jpg/10/32/49/68/360_F_1032496854_qMuCtI0ExKt5jph32zOZ2U6mx0N65Res.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
+
+/* Main Title */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, hsl(205, 83%, 52%), #ea9d32);
+  color: rgb(246, 245, 244);
+}
+
+/* Subheading */
+.sub-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #e2ecec;
+}
+
+/* GitHub Contributions Grid */
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 80%;
+  margin-top: 20px;
+}
+
+/* GitHub Tile */
+.github-tile {
+  background: rgba(156, 12, 147, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+
+  &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Repository Title */
+.repo-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Repository Description */
+.repo-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* GitHub Link Button */
+.repo-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #24292e;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+
+  &:hover {
+      background: #ff9800;
+  }
+
+  i {
+      margin-right: 5px;
+  }
+}
