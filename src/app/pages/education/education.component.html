@@ -1,28 +1,25 @@
 <div class="education-container">
-    <div class="roadmap">
-      <div class="pathway"></div>
-  
-      <!-- Loop through each milestone -->
-      <div *ngFor="let milestone of milestones; let i = index" 
-           class="milestone-container"
-           (click)="toggleExpand(i)">
-  
-        <!-- Circular Icon -->
-        <div class="milestone-icon">
+  <h2 class="section-title">Education Journey</h2>
+
+  <div class="education-grid">
+    <div *ngFor="let milestone of milestones" 
+         class="education-card"
+         (mouseenter)="milestone.expanded = true"
+         (mouseleave)="milestone.expanded = false">
+      
+      <!-- Card Header (Icon + Year) -->
+      <div class="education-header">
+        <div class="education-icon">
           <i [class]="milestone.icon"></i>
         </div>
-  
-        <!-- Tile Name (Always Visible) -->
-        <div class="milestone-title">{{ milestone.title }}</div>
+        <span class="education-year">{{ milestone.year }}</span>
+      </div>
 
-        <!-- Popup Details (Visible on Click) -->
-        <div class="milestone-popup" *ngIf="milestone.expanded">
-          <h3>{{ milestone.year }}</h3>
-          <h4>{{ milestone.title }}</h4>
-          <p>{{ milestone.description }}</p>
-          <p>{{ milestone.details }}</p>
-        </div>
+      <!-- Card Content -->
+      <div class="education-content">
+        <h3>{{ milestone.title }}</h3>
+        <p *ngIf="milestone.expanded">{{ milestone.description }}</p>
       </div>
     </div>
   </div>
-  
+</div>

@@ -18,7 +18,6 @@
     <div class="popup-overlay" *ngIf="selectedProject" (click)="closeProjectPopup()">
       <div class="popup-content" (click)="$event.stopPropagation()">
         <button class="close-btn" (click)="closeProjectPopup()">&times;</button>
-        <img [src]="selectedProject.image" [alt]="selectedProject.title">
         <h2><i class="{{ selectedProject.icon }}"></i> {{ selectedProject.title }}</h2>
         <p>{{ selectedProject.details }}</p>
         <div class="project-links">

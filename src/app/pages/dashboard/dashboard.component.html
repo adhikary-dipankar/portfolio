@@ -1,18 +1,25 @@
 <div class="dashboard">
-    <div class="hero">
-      <h1 class="hero-title">Hi, I'm <span class="highlight">Dipankar Adhikary</span></h1>
-      <h2 class="hero-subtitle"><span class="typed-text"></span></h2>
-      
-      <div class="hero-icons">
-        <img src="https://logowik.com/content/uploads/images/angular-a-letter-new-20243216.logowik.com.webp" alt="Angular">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/1200px-Microsoft_.NET_logo.svg.png" alt=".NET">
-        <img src="https://miro.medium.com/v2/1*-hkzF9m5828c-UIaSQNUug.jpeg" alt="SQL">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" alt="TypeScript">
-      </div>
-  
-      <button class="btn-primary explore-btn" (click)="navigateToProjects()">
-        View My Projects
-      </button>
+  <div class="hero">
+    <h1 class="hero-title">Hi, I'm <span class="highlight">Dipankar Adhikary</span></h1>
+    <h2 class="hero-subtitle"><span class="typed-text"></span></h2>
+    
+    <div class="hero-icons">
+      <img src="https://logowik.com/content/uploads/images/angular-a-letter-new-20243216.logowik.com.webp" alt="Angular">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/1200px-Microsoft_.NET_logo.svg.png" alt=".NET">
+      <img src="https://miro.medium.com/v2/1*-hkzF9m5828c-UIaSQNUug.jpeg" alt="SQL">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" alt="TypeScript">
+    </div>
+
+    <button class="btn-primary explore-btn" (click)="navigateTo('/projects')">
+      View My Projects
+    </button>
+  </div>
+
+  <!-- Navigation Cards for All Pages -->
+  <div class="dashboard-grid">
+    <div *ngFor="let page of pages" class="dashboard-tile" (click)="navigateTo(page.link)">
+      <i [class]="page.icon"></i>
+      <h3>{{ page.name }}</h3>
     </div>
   </div>
-  
+</div>

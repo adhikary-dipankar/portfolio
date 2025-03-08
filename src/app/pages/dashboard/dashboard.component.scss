@@ -1,65 +1,106 @@
 .dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #1E3A8A, #14B8A6);
+  color: white;
+  padding: 20px;
+}
+
+.hero {
+  max-width: 600px;
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .highlight {
+    color: #FFC107;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .hero-icons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background: linear-gradient(135deg, #1E3A8A, #14B8A6);
-    color: white;
-    padding: 20px;
-  }
-  
-  .hero {
-    max-width: 600px;
-  
-    .hero-title {
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-  
-    .highlight {
-      color: #FFC107; // Accent color
-    }
-  
-    .hero-subtitle {
-      font-size: 1.5rem;
-      margin-top: 10px;
-    }
-  
-    .hero-icons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      img {
-        width: 90px;  // Increase size for better visibility
-        height: 90px;
-        border-radius: 50%;  // Makes icons circular
-        background: rgba(255, 255, 255, 0.1); // Adds slight transparency
-        padding: 10px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); // Adds depth
+    margin-top: 20px;
     
-        &:hover {
-          transform: scale(1.3); // Enlarges icon on hover
-          box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.4); // Glowing effect
-        }
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
       
-      }
-    }
-  
-    .explore-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      background-color: #121212;
-      border: none;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s ease;
-  
       &:hover {
-        background-color: #FFC107;
+        transform: scale(1.3);
+        box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.4);
       }
     }
   }
-  
+
+  .explore-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #121212;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #FFC107;
+    }
+  }
+}
+
+/* Navigation Grid */
+.dashboard-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 20px;
+margin-top: 40px;
+width: 80%;
+max-width: 900px;
+}
+
+/* Navigation Tiles */
+.dashboard-tile {
+background: rgba(255, 255, 255, 0.1);
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+transition: transform 0.3s, box-shadow 0.3s;
+
+&:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #FFC107;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.dashboard-grid {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+}

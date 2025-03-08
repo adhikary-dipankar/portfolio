@@ -1,108 +1,111 @@
+$primary-color: #1E3A8A;
+$secondary-color: #14B8A6;
+$background-gradient: linear-gradient(135deg, $primary-color, $secondary-color);
+$card-bg: rgba(255, 255, 255, 0.1);
+$icon-bg: white;
+
 .education-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #1E3A8A, #14B8A6);
-    padding: 2rem;
-    position: relative;
+  text-align: center;
+  padding: 50px;
+  min-height: 100vh;
+  background: $background-gradient;
+  color: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Education Grid */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Education Card */
+.education-card {
+  background: $card-bg;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
   }
-  
-  .roadmap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    position: relative;
+}
+
+/* Card Header (Icon + Year) */
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.education-icon {
+  font-size: 1.8rem;
+  background: $icon-bg;
+  color: black;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.education-year {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Card Content */
+.education-content {
+  text-align: center;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
-  
-  /* Horizontal Pathway (Thread Connecting Milestones) */
-  .pathway {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: #00f5a0;
-    border-radius: 5px;
-    z-index: -1;
+
+  p {
+    display: none;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
-  
-  /* Individual Milestone Container */
-  .milestone-container {
-    position: relative;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
-  
-    &:hover {
-      transform: scale(1.1);
-    }
+}
+
+/* Show description on hover */
+.education-card:hover .education-content p {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Circular Milestone Icon */
-  .milestone-icon {
-    width: 60px;
-    height: 60px;
-    background: #0f3460;
-    color: #fff;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease;
+
+  .education-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
   }
-  
-  .milestone-container:hover .milestone-icon {
-    background: #ff4c29;
-  }
-  
-  /* Tile Name (Always Visible) */
-  .milestone-title {
-    font-size: 14px;
-    color: #fff;
-    margin-top: 10px;
-  }
-  
-  /* Connector Line Between Milestones */
-  .connector {
-    position: absolute;
-    width: 80px;
-    height: 4px;
-    background: #fff;
-    top: 50%;
-    left: 70px;
-  }
-  
-  /* Popup Content Box */
-  .milestone-popup {
-    position: absolute;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  /* Animation for Popup */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}

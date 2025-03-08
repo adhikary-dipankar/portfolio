@@ -12,13 +12,10 @@ export class DistributionComponent {
   githubRepos = [
     { name: "Portfolio", description: "A futuristic portfolio in Angular & .NET", url: "https://github.com/dipankaradhikary/angular-portfolio" },
     { name: "AI Mock Test", description: "AI-powered competitive exam mock tests.", url: "https://github.com/dipankaradhikary/ai-mock-test" },
-    { name: "QR Code Generator", description: "Dynamic QR code generator in Angular.", url: "https://github.com/dipankaradhikary/qr-code-generator" }
-  ];
+    { name: "QR Code Generator", description: "Dynamic QR code generator in Angular.", url: "https://github.com/dipankaradhikary/qr-code-generator" },
+    { name: "Receipt Generato", description: "Dynamic Receipt generator in Angular.", url: "https://github.com/dipankaradhikary/qr-code-generator" },
+    { name: "Orders Management", description: "Dynamic Order taking and give suggestions in Angular.", url: "https://github.com/dipankaradhikary/qr-code-generator" }
 
-  locations = [
-    { name: "India", top: "60%", left: "75%", description: "Major contributions from India." },
-    { name: "USA", top: "30%", left: "40%", description: "Used by developers in the USA." },
-    { name: "UK", top: "35%", left: "50%", description: "Collaborations with UK-based teams." }
   ];
 
   selectedLocation: any = null;
